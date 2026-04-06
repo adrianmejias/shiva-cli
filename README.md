@@ -14,4 +14,8 @@ Below are some related repositories that complement the functionality of the Shi
 - https://github.com/adrianmejias/shiva-fw
 - https://github.com/adrianmejias/shiva (fivem docker boilerplate)
 - https://github.com/adrianmejias/shiva-db
+- https://github.com/adrianmejias/shiva-cli (this repo)
 - https://github.com/adrianmejias/shiva-boot
+- https://github.com/adrianmejias/shiva-test
+- https://github.com/adrianmejias/shiva-docs
+- https://github.com/adrianmejias/shiva-api
