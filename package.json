@@ -1,13 +1,31 @@
 {
-  "name": "shiva-cli",
+  "name": "@shiva-fw/cli",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Developer CLI for the Shiva FiveM framework",
+  "main": "src/index.js",
+  "bin": {
+    "shiva": "./bin/shiva.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint src/**/*.js bin/**/*.js"
+  },
+  "keywords": ["fivem", "shiva", "cli", "framework"],
+  "author": "Adrian Mejias",
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^12.1.0",
+    "glob": "^8.1.0",
+    "inquirer": "^8.2.6",
+    "mysql2": "^3.9.7",
+    "semver": "^7.6.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }

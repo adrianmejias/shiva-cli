@@ -1,0 +1,30 @@
+{
+  "name": "minimal",
+  "description": "Essential modules for a minimal FiveM server — 24 modules",
+  "modules": {
+    "shiva-player": "^1.0.0",
+    "shiva-identity": "^1.0.0",
+    "shiva-jobs": "^1.0.0",
+    "shiva-economy": "^1.0.0",
+    "shiva-inventory": "^1.0.0",
+    "shiva-vehicles": "^1.0.0",
+    "shiva-housing": "^1.0.0",
+    "shiva-phone": "^1.0.0",
+    "shiva-hud": "^1.0.0",
+    "shiva-map": "^1.0.0",
+    "shiva-chat": "^1.0.0",
+    "shiva-permissions": "^1.0.0",
+    "shiva-admin": "^1.0.0",
+    "shiva-ban": "^1.0.0",
+    "shiva-logs": "^1.0.0",
+    "shiva-spawn": "^1.0.0",
+    "shiva-death": "^1.0.0",
+    "shiva-hunger": "^1.0.0",
+    "shiva-shops": "^1.0.0",
+    "shiva-garage": "^1.0.0",
+    "shiva-fuel": "^1.0.0",
+    "shiva-atm": "^1.0.0",
+    "shiva-crafting": "^1.0.0",
+    "shiva-notifications": "^1.0.0"
+  }
+}
