@@ -8,6 +8,11 @@
 *.ts diff=typescript
 *.yml diff=yaml
 *.sh diff=bash
+*.js diff=javascript
+*.json diff=json
+
+# Mark generated files
+package-lock.json linguist-generated=true
 
 /.github export-ignore
 CHANGELOG.md export-ignore
