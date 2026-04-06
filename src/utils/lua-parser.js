@@ -22,6 +22,7 @@ function parseModuleManifest(filePath) {
     description: extractLuaString(content, 'description'),
     author: extractLuaString(content, 'author'),
     dependencies: extractLuaArray(content, 'dependencies'),
+    events: extractLuaArray(content, 'events'),
   };
 
   return result;
