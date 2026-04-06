@@ -1,23 +1,15 @@
---- Migration: {{migration_name}}
---- Module:    {{module_name}}
---- Created:   {{created_at}}
 return {
-    up = function(db)
-        db.execute([[
+    up = function(DB)
+        DB.execute([[
             -- TODO: Write your migration SQL
             --
-            -- Example — create table:
+            -- Example:
             -- CREATE TABLE IF NOT EXISTS `{{snake_name}}` (
-            --     `id`         INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-            --     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            --     `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-            -- )
+            --     `id`         INT UNSIGNED NOT NULL AUTO_INCREMENT,
+            --     `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            --     `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+            --     PRIMARY KEY (`id`)
+            -- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
         ]])
-    end,
-
-    down = function(db)
-        -- TODO: Write the rollback SQL
-        -- Example:
-        -- db.execute('DROP TABLE IF EXISTS `{{snake_name}}`')
     end,
 }

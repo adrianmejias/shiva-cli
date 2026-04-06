@@ -1,18 +1,7 @@
---- @class {{ServiceName}}
---- Service: {{ServiceName}}
---- Module: {{module_name}}
-local {{ServiceName}} = {}
+{{ServiceName}} = {}
 
---- Initialize the service.
-function {{ServiceName}}:init()
-    -- TODO: Initialize service resources
-end
-
---- Example method.
---- @param data table
---- @return any
-function {{ServiceName}}:example(data)
+---@return any
+function {{ServiceName}}.example()
     -- TODO: Implement
+    -- Available globals: Container, Locale, Config, EventBus, Log, DB
 end
-
-return {{ServiceName}}

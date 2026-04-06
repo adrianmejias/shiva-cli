@@ -1,14 +1,5 @@
---- {{module_name}} — Client Entry Point
-
-local {{PascalName}} = {}
-
---- Initialize the client module
-function {{PascalName}}:init()
-    -- TODO: Client initialization
-    print(('[^2{{module_name}}^7] Client initialized'))
-end
-
-AddEventHandler('onClientResourceStart', function(resourceName)
-    if GetCurrentResourceName() ~= resourceName then return end
-    {{PascalName}}:init()
+-- Request initial state from server when character is ready.
+EventBus.on('player:characterReady', function()
+    -- TriggerServerEvent('{{module_short}}:requestState')
 end)
+Log.info('[{{module_short}}] Client ready.')

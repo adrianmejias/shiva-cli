@@ -26,7 +26,8 @@ function makeModuleCommand(program) {
 
 async function run(rawName, options) {
   const moduleName = normalizeModuleName(rawName);
-  const PascalName = toPascalCase(rawName.replace(/^shiva-/, ''));
+  const moduleShort = moduleName.replace(/^shiva-/, '');
+  const PascalName = toPascalCase(moduleShort);
 
   let description = options.description;
   let author = options.author;
@@ -62,18 +63,20 @@ async function run(rawName, options) {
 
   const vars = {
     module_name: moduleName,
+    module_short: moduleShort,
     PascalName,
     description,
     author,
   };
 
   const files = [
-    ['module/fxmanifest.lua.tpl', 'fxmanifest.lua'],
-    ['module/module.lua.tpl', 'module.lua'],
-    ['module/client/init.lua.tpl', 'client/init.lua'],
-    ['module/server/init.lua.tpl', 'server/init.lua'],
-    ['module/shared/init.lua.tpl', 'shared/init.lua'],
-    ['module/config/config.lua.tpl', 'config/config.lua'],
+    ['module/fxmanifest.lua.tpl',     'fxmanifest.lua'],
+    ['module/module.lua.tpl',         'module.lua'],
+    ['module/client/init.lua.tpl',    'client/boot.lua'],
+    ['module/server/init.lua.tpl',    'server/boot.lua'],
+    ['module/shared/init.lua.tpl',    `shared/sh_${moduleShort}.lua`],
+    ['module/config/config.lua.tpl',  'config/config.lua'],
+    ['module/locales/en.lua.tpl',     'locales/en.lua'],
   ];
 
   for (const [tpl, dest] of files) {
@@ -81,7 +84,7 @@ async function run(rawName, options) {
   }
 
   // Create empty directories with .gitkeep
-  const emptyDirs = ['migrations', 'locales', 'tests'];
+  const emptyDirs = ['migrations', 'tests'];
   for (const dir of emptyDirs) {
     const dirPath = path.join(moduleDir, dir);
     fs.mkdirSync(dirPath, { recursive: true });

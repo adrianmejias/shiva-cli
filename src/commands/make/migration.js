@@ -24,7 +24,9 @@ function makeMigrationCommand(program) {
 function run(rawName, options) {
   const snakeName = toSnakeCase(rawName).replace(/-/g, '_');
   const moduleName = normalizeModuleName(options.module);
-  const timestamp = new Date().toISOString().replace(/[-T:.Z]/g, '').slice(0, 14);
+  const now = new Date();
+  const pad = n => String(n).padStart(2, '0');
+  const timestamp = `${now.getFullYear()}_${pad(now.getMonth() + 1)}_${pad(now.getDate())}_${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;
   const fileName = `${timestamp}_${snakeName}.lua`;
   const migrationName = `${timestamp}_${snakeName}`;
   const createdAt = new Date().toISOString().replace('T', ' ').replace(/\.\d+Z$/, ' UTC');
