@@ -1,0 +1,13 @@
+* text=auto eol=lf
+
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.lua diff=lua
+*.tsx diff=typescriptreact
+*.ts diff=typescript
+*.yml diff=yaml
+*.sh diff=bash
+
+/.github export-ignore
+CHANGELOG.md export-ignore
