@@ -3,11 +3,21 @@
 -- Unit tests for {{describe_name}}.
 -- Run with: shiva test --module {{module_name}}
 
-local Spec = require('shiva-test.spec')
+-- Resolve shiva-test relative to this file (both modules live in the same [category] folder)
+package.path = '../../shiva-test/?.lua;../../shiva-test/?/init.lua;' .. package.path
 
-Spec.describe('{{describe_name}}', function(it, before, after)
-    before(function()
-        -- Stub globals used by {{describe_name}}
+local Test = require('src.init')
+
+Test.setup({ mode = 'server' })
+
+local describe   = Test.describe
+local it         = Test.it
+local expect     = Test.expect
+local beforeEach = Test.beforeEach
+
+describe('{{describe_name}}', function()
+    beforeEach(function()
+        -- Stub Shiva globals used by {{describe_name}}
         Container = { resolve = function() end, bind = function() end }
         Config    = { get = function() end, register = function() end }
         Locale    = { t = function(_, key) return key end, register = function() end }
@@ -17,10 +27,13 @@ Spec.describe('{{describe_name}}', function(it, before, after)
     end)
 
     it('passes a basic sanity check', function()
-        Spec.assertTrue(true)
+        expect(true):toBeTrue()
     end)
 
     -- it('should ...', function()
-    --     Spec.assertEqual(actual, expected)
+    --     local actual = ...
+    --     expect(actual):toBe(expected)
     -- end)
 end)
+
+Test.run()

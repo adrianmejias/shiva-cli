@@ -4,12 +4,11 @@ const path = require('path');
 const fs   = require('fs');
 const chalk = require('chalk');
 
-const { requireServerRoot, getShivaModulesDir, getResourcesDir } = require('../utils/server-root');
+const { requireServerRoot, getShivaModulesDir } = require('../utils/server-root');
 const { readShivaConfig } = require('../utils/config-reader');
 const { readLockfile, lockModule } = require('../packages/lockfile');
 const { resolveVersion } = require('../packages/resolver');
 const registry = require('../packages/registry');
-const { scanModules } = require('../utils/lua-parser');
 const { normalizeModuleName } = require('../generators/index');
 
 function updateCommand(program) {

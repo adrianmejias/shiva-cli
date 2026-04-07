@@ -46,7 +46,7 @@ const RESOURCE_TEMPLATES = [
 
 // ─── Server factory ───────────────────────────────────────────────────────────
 
-async function startMcpServer(options = {}) {
+async function startMcpServer() {
   const serverRoot = findServerRoot(process.cwd());
 
   const server = new Server(

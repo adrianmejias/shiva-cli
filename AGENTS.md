@@ -46,6 +46,7 @@ shiva-cli/
 │   │   │   ├── service.js         -- shiva make:service {name} [--module]
 │   │   │   ├── model.js           -- shiva make:model {name} [--module]
 │   │   │   ├── migration.js       -- shiva make:migration {name} [--module]
+│   │   │   ├── seed.js            -- shiva make:seed {name} --module
 │   │   │   ├── test.js            -- shiva make:test {name} [--module]
 │   │   │   └── contract.js        -- shiva make:contract {name}
 │   │   ├── migrate/
@@ -83,23 +84,21 @@ shiva-cli/
 │   │   │   ├── config.js          -- shiva:getModuleConfig
 │   │   │   ├── events.js          -- shiva:getRegisteredEvents
 │   │   │   ├── docs.js            -- shiva:searchDocs
-│   │   │   └── items.js           -- shiva:getItemDefinitions
+│   │   │   └── items.js           -- shiva:getItemDefinitions, shiva:getJobDefinitions, shiva:getAvailableCommands, shiva:getServiceMethods
 │   │   └── resources/
 │   │       ├── docs.js            -- shiva:docs/{topic}
 │   │       ├── contracts.js       -- shiva:contracts/{name}
 │   │       └── examples.js        -- shiva:examples/{pattern}
 │   ├── generators/
-│   │   ├── templates/             -- Scaffolding templates
-│   │   │   ├── module/            -- Full module template
-│   │   │   ├── service.lua.tpl
-│   │   │   ├── model.lua.tpl
-│   │   │   ├── migration.lua.tpl
-│   │   │   └── test.lua.tpl
-│   │   └── recipes/
-│   │       ├── minimal.json       -- 24 modules
-│   │       ├── standard.json      -- 40 modules
-│   │       ├── full-rp.json       -- 71 modules
-│   │       └── cops-and-robbers.json
+│   │   ├── index.js               -- Template engine (renderTemplate, writeTemplate)
+│   │   └── templates/             -- Scaffolding templates
+│   │       ├── module/            -- Full module template
+│   │       ├── service.lua.tpl
+│   │       ├── model.lua.tpl
+│   │       ├── migration.lua.tpl
+│   │       ├── seed.lua.tpl
+│   │       ├── contract.lua.tpl
+│   │       └── test.lua.tpl
 │   ├── packages/
 │   │   ├── resolver.js            -- Dependency resolution with version constraints
 │   │   ├── lockfile.js            -- shiva.lock management
@@ -130,6 +129,7 @@ shiva make:module fishing           # Scaffold a new module
 shiva make:service FishingService --module shiva-fishing
 shiva make:model Fish --module shiva-fishing
 shiva make:migration create_fish_catches --module shiva-fishing
+shiva make:seed fish_catches --module shiva-fishing
 shiva make:test fishing --module shiva-fishing
 shiva make:contract Fishing
 ```

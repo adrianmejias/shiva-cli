@@ -26,7 +26,6 @@ const RE_FIELD  = /^---@field\s+(\w+)\s+(\S+)(?:\s+(.*))?$/;
 const RE_PARAM  = /^---@param\s+(\w+)\s+(\S+)(?:\s+(.*))?$/;
 const RE_RETURN = /^---@return\s+(\S+)(?:\s+(\w+))?(?:\s+(.*))?$/;
 const RE_ALIAS  = /^---@alias\s+(\w+)\s+(\S+)(?:\s+(.*))?$/;
-const RE_TYPE   = /^---@type\s+(\S+)(?:\s+(.*))?$/;
 const RE_FN_DEF = /^(?:local\s+)?function\s+([\w.]+)\s*\(([^)]*)\)/;
 const RE_FN_ASSIGN = /^(?:local\s+)?([\w.]+)\s*=\s*function\s*\(([^)]*)\)/;
 const RE_COMMENT = /^---\s*(.*)/;
