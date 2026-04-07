@@ -1,0 +1,31 @@
+# Dev & test files
+tests/
+.eslintrc*
+.eslintignore
+jest.config*
+
+# Editor & OS
+.vscode/
+.idea/
+.DS_Store
+.editorconfig
+.nvmrc
+*.log
+
+# Git
+.git/
+.gitignore
+.gitattributes
+.github/
+
+# npm
+.npmrc
+package-lock.json
+
+# Docs & planning
+*.md
+!README.md
+
+# Session/CI artifacts
+.copilot/
+coverage/

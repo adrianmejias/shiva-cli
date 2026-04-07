@@ -4,7 +4,7 @@
   "description": "Developer CLI for the Shiva FiveM framework",
   "main": "src/index.js",
   "bin": {
-    "shiva": "./bin/shiva.js"
+    "shiva": "bin/shiva.js"
   },
   "scripts": {
     "test": "jest",
