@@ -13,10 +13,11 @@ shiva-cli is a Node.js CLI tool (distributed via npm as `@shiva-fw/cli`) that pr
 | 1 | shiva-fw | ✅ Done | Shared Lua foundation |
 | 2 | shiva-core | ✅ Done | FiveM framework engine |
 | 3 | shiva-modules | ✅ Done | 71 default RP modules |
-| 4 | shiva-test | 🔲 Pending | Testing framework |
+| 4 | shiva-test | ✅ Done | Testing framework |
 | 5 | **shiva-cli** | 🔲 This repo | Developer CLI + MCP server |
-| 6 | shiva-api | 🔲 Pending | External API server |
-| 7 | shiva-docs | 🔲 Pending | Documentation site |
+| 6 | shiva-api | ✅ Done | External API server |
+| 7 | shiva-docs | ✅ Done | Documentation site |
+| 8 | shiva-panel | ✅ Done | Admin panel |
 
 ## Installation
 

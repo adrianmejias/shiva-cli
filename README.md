@@ -18,3 +18,4 @@ Below are some related repositories that complement the functionality of the Shi
 - https://github.com/adrianmejias/shiva-test
 - https://github.com/adrianmejias/shiva-docs
 - https://github.com/adrianmejias/shiva-api
+- https://github.com/adrianmejias/shiva-panel
