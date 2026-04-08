@@ -1,7 +1,5 @@
 # shiva-cli
 
-[![Publish](https://github.com/adrianmejias/shiva-cli/actions/workflows/publish.yml/badge.svg)](https://github.com/adrianmejias/shiva-cli/actions/workflows/publish.yml)
-
 > Developer CLI for the [Shiva](https://github.com/adrianmejias/shiva-core) FiveM framework — scaffolding, migrations, package management, AI integration, and an MCP server.
 
 Think of it as Artisan for FiveM. Generate modules, run database migrations, manage packages with lockfile support, produce AI context files, and expose live framework data to AI tools via the Model Context Protocol.
