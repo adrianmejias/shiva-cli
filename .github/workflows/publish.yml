@@ -1,8 +1,9 @@
 name: Publish
 
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - 'v*'
 
 permissions:
   contents: read
@@ -11,14 +12,11 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
     steps:
       - uses: actions/checkout@v6
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
+      
+      - uses: actions/setup-node@v6
+        name: Setup Node.js
         with:
           node-version: '24'
           registry-url: 'https://registry.npmjs.org'
